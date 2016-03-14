@@ -10,7 +10,8 @@ A utility to parse and aggregate Google Compute Engine CSV usage files. Ensure y
     git clone https://github.com/omerio/compute-engine-usage-parser.git
     cd compute-engine-usage-parser
     mkdir dir usage
-    # Download the usage files, needs cloud sdk
+    # Download the usage files, needs cloud sdk. Note these files contain both daily and aggregate usage, you need 
+    # to use one or the other, otherwise you will count things twice
     gsutil -m cp gs://<usage-bucket>/*.csv usage/
     ./parse.sh usage
 ```  
